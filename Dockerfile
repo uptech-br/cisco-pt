@@ -35,8 +35,6 @@ RUN --mount=type=cache,id=cisco-pt,target=/var/cache/apt,sharing=locked \
     apt --no-install-suggests -fy install /tmp/CiscoPacketTracer_Ubuntu_64bit.deb; \
     rm -f /tmp/*
 
-# echo 'PacketTracer PacketTracer_900_amd64/accept-eula boolean true' | debconf-set-selections; \
-
 RUN set -eux; \
     \
     ln -sf /opt/pt/packettracer.AppImage /usr/local/bin/packettracer; \
